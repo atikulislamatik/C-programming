@@ -1,0 +1,45 @@
+#include<stdio.h>
+int main()
+{
+    char ch[100];
+
+    while(1)
+    {
+        printf("Enter the Main String : ");
+        scanf("%s",ch);
+
+        int len=strlen(ch);
+        int temp=len;
+
+        int i,j;
+
+        printf("Your Entered String Prefix are given bellow : \n");
+
+        for (i=0;i<len;i++)
+        {
+            for(j=0;j<=i;j++)
+            {
+                printf("%c",ch[j]);
+            }
+            printf("\n");
+        }
+         printf("\n");
+
+
+         printf("Your Entered String Prefix last word in first position are given bellow : \n");
+
+         for(i=0; i<temp; i++)
+        {
+            for( j=len-1; j<temp; j++)
+            {
+                printf("%c",ch[j]);
+            }
+            len--;
+            printf("\n");
+
+        }
+
+    }
+    return 0;
+
+}
